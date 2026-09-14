@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alidev-0.github.io/alghadir-weekly-schedule/sitemap.xml
