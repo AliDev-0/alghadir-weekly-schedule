@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#c8d9ee" id="theme-color">
-<meta name="description" content="برنامه هفتگی الغدیر زنجان (مهندسی کامپیوتر)؛ چارت انتخاب واحد، ساعت کلاس‌ها، استادان و محل برگزاری از شنبه تا چهارشنبه.">
+<meta name="description" content="برنامه هفتگی و تقویم امتحانات نیمسال پاییز ۱۴۰۵ مهندسی کامپیوتر الغدیر زنجان؛ ساعت کلاس‌ها، استادان، کد استاندارد، واحدها و محل برگزاری.">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <meta name="author" content="Ali Moradi Dev">
@@ -12,21 +12,21 @@
 <meta name="geo.region" content="IR-11">
 <meta name="geo.placename" content="Zanjan">
 
-<link rel="canonical" href="https://alidev-0.github.io/">
-<link rel="alternate" hreflang="fa-IR" href="https://alidev-0.github.io/">
+<link rel="canonical" href="https://alidev-0.github.io/alghadir-weekly-schedule/">
+<link rel="alternate" hreflang="fa-IR" href="https://alidev-0.github.io/alghadir-weekly-schedule/">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fa_IR">
-<meta property="og:title" content="برنامه هفتگی الغدیر زنجان (مهندسی کامپیوتر) | چارت انتخاب واحد">
-<meta property="og:description" content="برنامه هفتگی الغدیر زنجان برای مهندسی کامپیوتر؛ مشاهده درس‌ها، ساعت کلاس، استاد و محل برگزاری.">
-<meta property="og:url" content="https://alidev-0.github.io/">
+<meta property="og:title" content="برنامه هفتگی و تقویم امتحانات الغدیر زنجان | مهندسی کامپیوتر">
+<meta property="og:description" content="برنامه هفتگی و تقویم امتحانات نیمسال پاییز ۱۴۰۵ مهندسی کامپیوتر الغدیر زنجان.">
+<meta property="og:url" content="https://alidev-0.github.io/alghadir-weekly-schedule/">
 <meta property="og:site_name" content="برنامه هفتگی الغدیر زنجان">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="برنامه هفتگی الغدیر زنجان (مهندسی کامپیوتر)">
-<meta name="twitter:description" content="چارت انتخاب واحد و برنامه هفتگی مهندسی کامپیوتر در الغدیر زنجان.">
+<meta name="twitter:description" content="برنامه هفتگی، اطلاعات درس‌ها و تاریخ امتحانات مهندسی کامپیوتر الغدیر زنجان.">
 
-<title>برنامه هفتگی الغدیر زنجان (مهندسی کامپیوتر) | چارت انتخاب واحد</title>
+<title>برنامه هفتگی و تقویم امتحانات الغدیر زنجان | مهندسی کامپیوتر</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -2650,6 +2650,91 @@ html[data-theme="night"] .nav-center{
   transform:scale(.985);
 }
 
+
+.calendar-section-title{
+  margin:14px 2px 5px;
+  font-size:10.5px;
+  line-height:1.7;
+  font-weight:800;
+  color:var(--text);
+}
+
+.exam-heading{
+  padding-top:3px;
+  border-top:1px solid var(--hair);
+}
+
+.exam-list{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+  margin-top:7px;
+}
+
+.exam-entry{
+  display:grid;
+  grid-template-columns:31px minmax(0,1fr) minmax(98px,auto);
+  align-items:center;
+  gap:8px;
+  width:100%;
+  min-width:0;
+  padding:8px;
+  border:1px solid var(--row-border);
+  border-radius:13px;
+  background:var(--row);
+  text-align:right;
+  color:var(--text);
+  transition:transform .16s var(--ease),background .2s;
+}
+
+.exam-entry:active{transform:scale(.99)}
+
+.exam-entry-icon{
+  display:grid;
+  place-items:center;
+  width:30px;
+  height:30px;
+  border-radius:10px;
+  background:var(--chip-soft);
+  color:var(--accent);
+}
+
+.exam-entry-icon svg{width:15px;height:15px}
+.exam-entry-copy{display:block;min-width:0}
+.exam-entry-copy strong{
+  display:block;
+  font-size:9px;
+  line-height:1.6;
+  font-weight:700;
+  overflow-wrap:anywhere;
+}
+.exam-entry-copy small{
+  display:block;
+  margin-top:1px;
+  color:var(--text-dim);
+  font-size:7.6px;
+}
+.exam-entry-time{
+  min-width:0;
+  color:var(--text-dim);
+  font-size:7.8px;
+  line-height:1.7;
+  font-weight:600;
+  text-align:left;
+  direction:rtl;
+  white-space:normal;
+}
+.exam-entry-time.unknown{color:var(--text-faint)}
+
+.c-code{
+  display:block;
+  margin:0 0 2px;
+  color:var(--text-faint);
+  font-size:7px;
+  line-height:1.3;
+  font-weight:500;
+}
+
 .calendar-note{
   margin:
     10px
@@ -3450,6 +3535,36 @@ input:focus-visible{
   }
 }
 
+
+/* ==================== LIGHTWEIGHT RESPONSIVE GLASS ==================== */
+@media(max-width:480px){
+  .header::after{
+    backdrop-filter:blur(19px) saturate(1.3);
+    -webkit-backdrop-filter:blur(19px) saturate(1.3);
+  }
+  .glass,.bottom-nav,.sheet,.seo-intro,.aeo-faq,.search-field,.loader-card{
+    backdrop-filter:blur(16px) saturate(1.25);
+    -webkit-backdrop-filter:blur(16px) saturate(1.25);
+  }
+  .bg-glow{filter:blur(44px);opacity:.36}
+  .bg-orb{filter:blur(4px)}
+  .media-img,.bg-img{will-change:auto}
+}
+
+@media(max-width:340px){
+  .day-card{grid-template-columns:minmax(0,1fr) 68px}
+  .class-row{
+    grid-template-columns:40px minmax(0,1fr) 20px 32px 23px;
+    column-gap:3px;
+    padding:5px;
+  }
+  .c-time{font-size:6.7px}
+  .c-loc{font-size:6.4px}
+  .c-icon{width:23px;height:25px;border-radius:8px}
+  .exam-entry{grid-template-columns:27px minmax(0,1fr);}
+  .exam-entry-time{grid-column:2;text-align:right;margin-top:2px}
+}
+
 /* ==================== SEO / AEO ==================== */
 
 .seo-intro{
@@ -3607,20 +3722,20 @@ html[data-theme="night"] .aeo-faq{
   "@graph":[
     {
       "@type":"WebSite",
-      "@id":"https://alidev-0.github.io/#website",
-      "url":"https://alidev-0.github.io/",
+      "@id":"https://alidev-0.github.io/alghadir-weekly-schedule/#website",
+      "url":"https://alidev-0.github.io/alghadir-weekly-schedule/",
       "name":"برنامه هفتگی الغدیر زنجان (مهندسی کامپیوتر)",
       "alternateName":"چارت انتخاب واحد الغدیر زنجان",
       "inLanguage":"fa-IR"
     },
     {
       "@type":"CollectionPage",
-      "@id":"https://alidev-0.github.io/#webpage",
-      "url":"https://alidev-0.github.io/",
-      "name":"برنامه هفتگی الغدیر زنجان (مهندسی کامپیوتر) | چارت انتخاب واحد",
+      "@id":"https://alidev-0.github.io/alghadir-weekly-schedule/#webpage",
+      "url":"https://alidev-0.github.io/alghadir-weekly-schedule/",
+      "name":"برنامه هفتگی و تقویم امتحانات الغدیر زنجان | مهندسی کامپیوتر",
       "headline":"برنامه هفتگی الغدیر زنجان (مهندسی کامپیوتر)",
-      "description":"برنامه هفتگی و چارت انتخاب واحد مهندسی کامپیوتر آموزشکده پسران الغدیر زنجان؛ شامل روز و ساعت کلاس، درس، استاد و محل برگزاری.",
-      "isPartOf":{"@id":"https://alidev-0.github.io/#website"},
+      "description":"برنامه هفتگی و تقویم امتحانات نیمسال پاییز ۱۴۰۵ مهندسی کامپیوتر آموزشکده پسران الغدیر زنجان؛ شامل کد درس، واحدها، زمان کلاس و آزمون.",
+      "isPartOf":{"@id":"https://alidev-0.github.io/alghadir-weekly-schedule/#website"},
       "inLanguage":"fa-IR",
       "about":[
         {"@type":"Thing","name":"برنامه هفتگی الغدیر زنجان"},
@@ -3646,14 +3761,14 @@ html[data-theme="night"] .aeo-faq{
     },
     {
       "@type":"FAQPage",
-      "@id":"https://alidev-0.github.io/#faq",
+      "@id":"https://alidev-0.github.io/alghadir-weekly-schedule/#faq",
       "mainEntity":[
         {
           "@type":"Question",
           "name":"برنامه هفتگی الغدیر زنجان برای مهندسی کامپیوتر چیست؟",
           "acceptedAnswer":{
             "@type":"Answer",
-            "text":"این صفحه برنامه هفتگی مهندسی کامپیوتر آموزشکده پسران الغدیر زنجان را از شنبه تا چهارشنبه نشان می‌دهد و اطلاعات هر کلاس را همراه با ساعت، استاد و محل برگزاری ارائه می‌کند."
+            "text":"این صفحه برنامه هفتگی و تقویم امتحانات نیمسال پاییز ۱۴۰۵ مهندسی کامپیوتر آموزشکده پسران الغدیر زنجان را همراه با ساعت، استاد، کد درس، واحدها و محل برگزاری ارائه می‌کند."
           }
         },
         {
@@ -3661,7 +3776,7 @@ html[data-theme="night"] .aeo-faq{
           "name":"چارت انتخاب واحد الغدیر زنجان چه اطلاعاتی دارد؟",
           "acceptedAnswer":{
             "@type":"Answer",
-            "text":"چارت شامل درس‌های انتخاب‌شده، تعداد واحد هر درس، زمان هر جلسه، نام استاد و در صورت مشخص بودن محل برگزاری است."
+            "text":"اطلاعات هر درس شامل کد استاندارد، واحدهای تئوری و عملی، زمان جلسات، استاد، محل برگزاری و در صورت اعلام شدن، تاریخ و ساعت آزمون است."
           }
         },
         {
@@ -3669,7 +3784,15 @@ html[data-theme="night"] .aeo-faq{
           "name":"چطور درس یا استاد موردنظر را سریع پیدا کنم؟",
           "acceptedAnswer":{
             "@type":"Answer",
-            "text":"از جست‌وجوی بالای صفحه استفاده کن و نام درس یا استاد را وارد کن؛ فیلتر دسته‌بندی هم برای محدود کردن نتایج در دسترس است."
+            "text":"از جست‌وجوی بالای صفحه استفاده کن و نام درس، کد استاندارد یا استاد را وارد کن؛ فیلتر دسته‌بندی هم برای محدود کردن نتایج در دسترس است."
+          }
+        },
+        {
+          "@type":"Question",
+          "name":"تاریخ امتحانات نیمسال پاییز ۱۴۰۵ کجاست؟",
+          "acceptedAnswer":{
+            "@type":"Answer",
+            "text":"از دکمه تقویم استفاده کن. تاریخ و ساعت امتحان‌های اعلام‌شده در تقویم و جزئیات هر درس نمایش داده می‌شود؛ آزمون دو آزمایشگاه طبق اعلام مدرس است."
           }
         }
       ]
@@ -3786,7 +3909,7 @@ html[data-theme="night"] .aeo-faq{
             <circle cx="12" cy="12" r="9"/>
           </svg>
 
-          نیمسال تحصیلی · پاییز ۱۴۰۴
+          نیمسال تحصیلی · پاییز ۱۴۰۵
 
         </p>
 
@@ -3958,7 +4081,7 @@ html[data-theme="night"] .aeo-faq{
       </h2>
 
       <p>
-        این صفحه چارت هفتگی مهندسی کامپیوتر آموزشکده پسران الغدیر زنجان را از شنبه تا چهارشنبه نمایش می‌دهد؛ شامل نام درس، ساعت، استاد، تعداد واحد و محل برگزاری.
+        این صفحه برنامه هفتگی و تقویم امتحانات نیمسال پاییز ۱۴۰۵ مهندسی کامپیوتر آموزشکده پسران الغدیر زنجان را نشان می‌دهد؛ شامل زمان جلسات، استاد، کد استاندارد، واحدهای تئوری و عملی، محل برگزاری و تاریخ آزمون‌ها.
       </p>
     </section>
 
@@ -4129,7 +4252,7 @@ html[data-theme="night"] .aeo-faq{
         </summary>
 
         <p>
-          این صفحه برنامه هفتگی مهندسی کامپیوتر آموزشکده پسران الغدیر زنجان را از شنبه تا چهارشنبه نشان می‌دهد و اطلاعات هر کلاس را همراه با ساعت، استاد و محل برگزاری ارائه می‌کند.
+          این صفحه برنامه هفتگی و تقویم امتحانات نیمسال پاییز ۱۴۰۵ مهندسی کامپیوتر آموزشکده پسران الغدیر زنجان را همراه با ساعت، استاد، کد درس، واحدها و محل برگزاری ارائه می‌کند.
         </p>
       </details>
 
@@ -4139,7 +4262,7 @@ html[data-theme="night"] .aeo-faq{
         </summary>
 
         <p>
-          چارت شامل درس‌های انتخاب‌شده، تعداد واحد هر درس، زمان هر جلسه، نام استاد و در صورت مشخص بودن محل برگزاری است.
+          اطلاعات هر درس شامل کد استاندارد، واحدهای تئوری و عملی، زمان جلسات، استاد، محل برگزاری و در صورت اعلام شدن، تاریخ و ساعت آزمون است.
         </p>
       </details>
 
@@ -4149,7 +4272,17 @@ html[data-theme="night"] .aeo-faq{
         </summary>
 
         <p>
-          از جست‌وجوی بالای صفحه استفاده کن و نام درس یا استاد را وارد کن؛ فیلتر دسته‌بندی هم برای محدود کردن نتایج در دسترس است.
+          از جست‌وجوی بالای صفحه استفاده کن و نام درس، کد استاندارد یا استاد را وارد کن؛ فیلتر دسته‌بندی هم برای محدود کردن نتایج در دسترس است.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          تاریخ امتحانات نیمسال پاییز ۱۴۰۵ کجاست؟
+        </summary>
+
+        <p>
+          از دکمه تقویم در بالای صفحه یا دکمه میانی پایین صفحه استفاده کن. تاریخ و ساعت امتحان‌های اعلام‌شده در تقویم و جزئیات هر درس نمایش داده می‌شود؛ آزمون دو آزمایشگاه طبق اعلام مدرس است.
         </p>
       </details>
 
@@ -4396,7 +4529,7 @@ const DAYS_DEF=[
     key:'sat',
     id:'day-sat',
     day:'شنبه',
-    date:'۱ مهر',
+    date:'برنامه هفتگی',
     icon:'sun',
     img:IMG.sat,
     tint:'rgba(255,158,84,.26)'
@@ -4406,7 +4539,7 @@ const DAYS_DEF=[
     key:'sun',
     id:'day-sun',
     day:'یکشنبه',
-    date:'۲ مهر',
+    date:'برنامه هفتگی',
     icon:'moon',
     img:IMG.sun,
     tint:'rgba(96,150,235,.24)'
@@ -4416,7 +4549,7 @@ const DAYS_DEF=[
     key:'mon',
     id:'day-mon',
     day:'دوشنبه',
-    date:'۳ مهر',
+    date:'برنامه هفتگی',
     icon:'cloud',
     img:IMG.mon,
     tint:'rgba(34,196,184,.22)'
@@ -4426,7 +4559,7 @@ const DAYS_DEF=[
     key:'tue',
     id:'day-tue',
     day:'سه‌شنبه',
-    date:'۴ مهر',
+    date:'برنامه هفتگی',
     icon:'cloud',
     img:IMG.tue,
     tint:'rgba(190,92,224,.26)'
@@ -4436,7 +4569,7 @@ const DAYS_DEF=[
     key:'wed',
     id:'day-wed',
     day:'چهارشنبه',
-    date:'۵ مهر',
+    date:'برنامه هفتگی',
     icon:'moon',
     img:IMG.wed,
     tint:'rgba(82,116,235,.26)'
@@ -4453,7 +4586,8 @@ const schedule=[
     course:'هوش مصنوعی',
     instructor:'فرشته محمدی',
     credits:3,
-    location:null,
+    location:'سایت کامپیوتر A (روبروی ورزشگاه)',
+    locationShort:'سایت A',
     category:'ai'
   },
 
@@ -4464,7 +4598,8 @@ const schedule=[
     course:'آزمایشگاه هوش مصنوعی',
     instructor:'میثم اسکندری',
     credits:1,
-    location:'سایت کامپیوتر A',
+    location:'سایت کامپیوتر A (روبروی ورزشگاه)',
+    locationShort:'سایت A',
     category:'ai-lab'
   },
 
@@ -4475,7 +4610,8 @@ const schedule=[
     course:'پردازش تصویر کاربردی',
     instructor:'سعید اسمعیلی',
     credits:3,
-    location:'سایت کامپیوتر B',
+    location:'سایت کامپیوتر B (روبروی ورزشگاه)',
+    locationShort:'سایت B',
     category:'image-processing'
   },
 
@@ -4486,7 +4622,8 @@ const schedule=[
     course:'اینترنت اشیاء',
     instructor:'بهنام قهرمانخانی',
     credits:3,
-    location:'سایت کامپیوتر B',
+    location:'کلاس ۲۰۳، ساختمان آموزشی شماره ۲',
+    locationShort:'کلاس ۲۰۳',
     category:'iot'
   },
 
@@ -4497,7 +4634,8 @@ const schedule=[
     course:'مباحث ویژه',
     instructor:'بهنام قهرمانخانی',
     credits:3,
-    location:'سایت کامپیوتر B',
+    location:'سایت کامپیوتر E (طبقه بالای ساختمان کارگاه‌ها)',
+    locationShort:'سایت E',
     category:'special'
   },
 
@@ -4508,7 +4646,8 @@ const schedule=[
     course:'اینترنت اشیاء',
     instructor:'بهنام قهرمانخانی',
     credits:3,
-    location:'سایت کامپیوتر A',
+    location:'کلاس ۲۰۳، ساختمان آموزشی شماره ۲',
+    locationShort:'کلاس ۲۰۳',
     category:'iot'
   },
 
@@ -4519,7 +4658,8 @@ const schedule=[
     course:'مباحث ویژه',
     instructor:'بهنام قهرمانخانی',
     credits:3,
-    location:'سایت کامپیوتر A',
+    location:'سایت کامپیوتر E (طبقه بالای ساختمان کارگاه‌ها)',
+    locationShort:'سایت E',
     category:'special'
   },
 
@@ -4530,7 +4670,7 @@ const schedule=[
     course:'آزمایشگاه مهندسی نرم‌افزار',
     instructor:'سمیرا نجفی',
     credits:1,
-    location:'سایت کامپیوتر A',
+    location:null,
     category:'se-lab'
   },
 
@@ -4541,7 +4681,7 @@ const schedule=[
     course:'آزمایشگاه مهندسی نرم‌افزار',
     instructor:'سمیرا نجفی',
     credits:1,
-    location:'سایت کامپیوتر C',
+    location:null,
     category:'se-lab'
   },
 
@@ -4552,7 +4692,8 @@ const schedule=[
     course:'مهندسی نرم‌افزار',
     instructor:'سحر لطیفی',
     credits:2,
-    location:null,
+    location:'کلاس ۱۰۶',
+    locationShort:'کلاس ۱۰۶',
     category:'se'
   },
 
@@ -4563,10 +4704,48 @@ const schedule=[
     course:'تفسیر موضوعی قرآن',
     instructor:'حسین باقری',
     credits:2,
-    location:null,
+    location:'کلاس ۱۰۳',
+    locationShort:'کلاس ۱۰۳',
     category:'quran'
   }
 ];
+
+/* ==================== COURSE DETAILS / EXAMS ==================== */
+
+const COURSE_INFO={
+  ai:{
+    code:'705007', theory:3, practical:0, credits:3,
+    examDate:'1405/10/26', examTime:'08:00'
+  },
+  'ai-lab':{
+    code:'705008', theory:0, practical:1, credits:1,
+    examDate:null, examTime:null
+  },
+  iot:{
+    code:'705022', theory:2, practical:1, credits:3,
+    examDate:'1405/10/21', examTime:'08:00'
+  },
+  'image-processing':{
+    code:'705025', theory:2, practical:1, credits:3,
+    examDate:'1405/10/23', examTime:'08:00'
+  },
+  quran:{
+    code:'9116', theory:2, practical:0, credits:2,
+    examDate:'1405/10/19', examTime:'13:00'
+  },
+  special:{
+    code:'705021', theory:2, practical:1, credits:3,
+    examDate:'1405/10/28', examTime:'08:00'
+  },
+  se:{
+    code:'705009', theory:2, practical:0, credits:2,
+    examDate:'1405/10/30', examTime:'10:30'
+  },
+  'se-lab':{
+    code:'705010', theory:0, practical:1, credits:1,
+    examDate:null, examTime:null
+  }
+};
 
 /* ==================== FILTERS ==================== */
 
@@ -4926,8 +5105,8 @@ function renderCourseRow(s,i){
 
       '<span class="c-loc '+
         (!s.location?'na':'')+
-      '">'+
-        (s.location||'مشخص نشده')+
+      '" title="'+(s.location||'محل برگزاری اعلام نشده')+'">'+
+        (s.locationShort||'نامشخص')+
       '</span>'+
 
       '<span class="c-icon" style="background:linear-gradient(140deg,'+
@@ -5140,12 +5319,14 @@ function applyFilters(){
             state.filter==='all' ||
             c.group===state.filter;
 
+          const code=
+            COURSE_INFO[row.dataset.cat]?.code || '';
+
           const okQuery=
             !q ||
-            norm(row.dataset.course)
-              .includes(q) ||
-            norm(row.dataset.instructor)
-              .includes(q);
+            norm(row.dataset.course).includes(q) ||
+            norm(row.dataset.instructor).includes(q) ||
+            norm(code).includes(q);
 
           const ok=
             okGroup &&
@@ -5391,80 +5572,66 @@ function openCalendarSheet(){
       .map(d=>{
 
         const count=
-          schedule.filter(
-            s=>s.day===d.day
-          ).length;
+          schedule.filter(s=>s.day===d.day).length;
 
         return (
-          '<button class="week-day-button" '+
-          'type="button" '+
-          'data-calendar-day="'+d.id+'">'+
-
-            '<span class="day-sheet-icon">'+
-              icon(d.icon)+
-            '</span>'+
-
+          '<button class="week-day-button" type="button" data-calendar-day="'+d.id+'">'+
+            '<span class="day-sheet-icon">'+icon(d.icon)+'</span>'+
             '<span class="week-day-text">'+
-
-              '<strong>'+
-                d.day+
-              '</strong>'+
-
-              '<small>'+
-                d.date+
-              '</small>'+
-
+              '<strong>'+d.day+'</strong>'+
+              '<small>برنامه هفتگی</small>'+
             '</span>'+
-
             '<span class="week-count">'+
-              (
-                count
-                  ? fa(count)+' جلسه'
-                  : 'روز استراحت'
-              )+
+              (count ? fa(count)+' جلسه' : 'بدون کلاس')+
             '</span>'+
-
-            icon(
-              'chevron',
-              'chevron'
-            )+
-
+            icon('chevron','chevron')+
           '</button>'
         );
+      })
+      .join('');
 
+  const exams=
+    Object.entries(COURSE_INFO)
+      .map(([key,info])=>({key,info,name:CATEGORY[key].label}))
+      .sort((a,b)=>{
+        if(!a.info.examDate && !b.info.examDate)return 0;
+        if(!a.info.examDate)return 1;
+        if(!b.info.examDate)return -1;
+        return a.info.examDate.localeCompare(b.info.examDate);
+      })
+      .map(({key,info,name})=>{
+        const dateLabel=info.examDate
+          ? fa(info.examDate)+' · ساعت '+fa(info.examTime)
+          : 'طبق اعلام مدرس · زمان اعلام نشده';
+
+        return (
+          '<button class="exam-entry" type="button" data-exam-course="'+key+'">'+
+            '<span class="exam-entry-icon">'+icon('calCheck')+'</span>'+
+            '<span class="exam-entry-copy">'+
+              '<strong>'+name+'</strong>'+
+              '<small>کد '+fa(info.code)+'</small>'+
+            '</span>'+
+            '<span class="exam-entry-time '+(!info.examDate?'unknown':'')+'">'+dateLabel+'</span>'+
+          '</button>'
+        );
       })
       .join('');
 
   openSheet(
     '<div class="sheet-head">'+
-
-      '<span class="c-icon" style="background:linear-gradient(140deg,#5f7cf6,#9a4fe0)">'+
-        icon('calCheck')+
-      '</span>'+
-
+      '<span class="c-icon" style="background:linear-gradient(140deg,#5f7cf6,#9a4fe0)">'+icon('calCheck')+'</span>'+
       '<div class="sheet-heading-copy">'+
-
-        '<h3>روزهای برنامه</h3>'+
-
-        '<p class="sheet-sub">'+
-          'ترم پاییز ۱۴۰۴'+
-        '</p>'+
-
+        '<h3>تقویم نیمسال ۱۴۰۵</h3>'+
+        '<p class="sheet-sub">برنامه هفتگی و امتحانات پایان‌ترم</p>'+
       '</div>'+
-
-      '<button class="sheet-close" type="button" data-close-sheet aria-label="بستن">'+
-        icon('x')+
-      '</button>'+
-
+      '<button class="sheet-close" type="button" data-close-sheet aria-label="بستن">'+icon('x')+'</button>'+
     '</div>'+
-
-    '<div class="calendar-list">'+
-      rows+
-    '</div>'+
-
-    '<p class="calendar-note">'+
-      'برای رفتن سریع به هر روز، یکی از روزهای بالا را انتخاب کن.'+
-    '</p>'
+    '<h4 class="calendar-section-title">برنامه هفتگی کلاس‌ها</h4>'+
+    '<div class="calendar-list">'+rows+'</div>'+
+    '<p class="calendar-note">برای رفتن به کارت هر روز، روز موردنظر را انتخاب کن. تاریخ مشخصی برای جلسات هفتگی ثبت نشده است.</p>'+
+    '<h4 class="calendar-section-title exam-heading">امتحانات پایان‌ترم</h4>'+
+    '<div class="exam-list">'+exams+'</div>'+
+    '<p class="calendar-note">برای آزمایشگاه هوش مصنوعی و آزمایشگاه مهندسی نرم‌افزار، تاریخ آزمون طبق اعلام مدرس است. مدت و محل آزمون‌ها در اطلاعات دریافتی مشخص نشده است.</p>'
   );
 }
 
@@ -5510,16 +5677,13 @@ function openCourse(id){
   const c=
     CATEGORY[s.category];
 
+  const info=
+    COURSE_INFO[s.category];
+
   const same=
     schedule.filter(
       x=>x.course===s.course
     );
-
-  const dates={};
-
-  DAYS_DEF.forEach(
-    d=>dates[d.day]=d.date
-  );
 
   const sessions=
     same.length>1
@@ -5546,8 +5710,6 @@ function openCourse(id){
 
                       '<span>'+
                         x.day+
-                        ' · '+
-                        dates[x.day]+
                       '</span>'+
 
                       '<small>'+
@@ -5631,10 +5793,67 @@ function openCourse(id){
 
       metaRow(
         'pin',
-        'مکان',
+        'محل کلاس',
         s.location ||
-          'مکان مشخص نشده',
+          'طبق اطلاعات دریافتی مشخص نشده',
         !s.location
+      )+
+
+      metaRow(
+        'tag',
+        'کد استاندارد',
+        fa(info.code)
+      )+
+
+      metaRow(
+        'cap',
+        'واحد تئوری',
+        fa(info.theory)+' واحد'
+      )+
+
+      metaRow(
+        'flask',
+        'واحد عملی',
+        fa(info.practical)+' واحد'
+      )+
+
+      metaRow(
+        'bookStack',
+        'جمع واحد درس',
+        fa(info.credits)+' واحد'
+      )+
+
+      (info.examDate
+        ? metaRow(
+            'calCheck',
+            'تاریخ آزمون',
+            fa(info.examDate)
+          )+
+          metaRow(
+            'clock',
+            'ساعت آزمون',
+            fa(info.examTime)
+          )
+        : metaRow(
+            'calCheck',
+            'آزمون',
+            'طبق اعلام مدرس',
+            true
+          )
+      )+
+
+      metaRow(
+        'hourglass',
+        'مدت آزمون',
+        'مشخص نشده',
+        true
+      )+
+
+      metaRow(
+        'pin',
+        'محل آزمون',
+        'مشخص نشده',
+        true
       )+
 
       metaRow(
@@ -6078,6 +6297,17 @@ $('#sheetContent')
 
         closeSheet();
 
+        return;
+      }
+
+      const exam=
+        e.target.closest('[data-exam-course]');
+
+      if(exam){
+        const index=schedule.findIndex(
+          item=>item.category===exam.dataset.examCourse
+        );
+        if(index>=0)openCourse(index);
         return;
       }
 
